@@ -1,0 +1,79 @@
+<div class="pokemonBox">
+    <div>
+        <img [src]="pokemon.sprites.front_default">
+        <div>
+            <h2>Estadisticas</h2>
+            <div class="testing">
+                <div class="nameStatsBlock">
+                    <p>{{pokemon.stats[0].stat.name | uppercase}}</p>
+                    <p>{{pokemon.stats[1].stat.name | uppercase}}</p>
+                    <p>{{pokemon.stats[2].stat.name | uppercase}}</p>
+                    <p>{{pokemon.stats[3].stat.name | uppercase}}</p>
+                    <p>{{pokemon.stats[4].stat.name | uppercase}}</p>
+                    <p>{{pokemon.stats[5].stat.name | uppercase}}</p>
+                </div>
+                <div>
+                    <p>{{pokemon.stats[0].base_stat }}</p>
+                    <p>{{pokemon.stats[1].base_stat }}</p>
+                    <p>{{pokemon.stats[2].base_stat }}</p>
+                    <p>{{pokemon.stats[3].base_stat }}</p>
+                    <p>{{pokemon.stats[4].base_stat }}</p>
+                    <p>{{pokemon.stats[5].base_stat }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="elementTypes">
+
+        <div class="debil">
+            <h1>Débil</h1>
+            <hr>
+            <div class="elementos">
+                <ul>
+                    <li *ngFor="let datos of double_damage">
+                        {{datos.name | titlecase}} : x{{datos.damage}}
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    
+        <div>
+            <h1>Normal</h1>
+            <hr>
+            <div class="neutros">
+                <ul>
+                    <li *ngFor="let datos of generalElements">
+                        {{datos  | titlecase }} : x1
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div>
+            <h1>Resistente</h1>
+            <hr>
+            <div class="elementos">
+                <ul>
+                    <li *ngFor="let datos of half_damage">
+                        {{datos.name  | titlecase }} : x{{datos.damage}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h1>Inmune</h1>
+            <hr>
+            <div class="elementos">
+                <ul>
+                    <li *ngFor="let datos of inmune">
+                        {{datos.name  | titlecase }} : x{{datos.damage}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>

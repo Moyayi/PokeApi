@@ -1,0 +1,8 @@
+<div class="previewPokemon" [routerLink]="['/pokemon/infoPokemon', dataInfoPokemon.name]">
+    <img [src]="dataInfoPokemon.sprites.front_default"> 
+    <h3> {{ dataInfoPokemon.name | titlecase}} </h3>
+    <h3>Type</h3>
+    <p *ngFor="let types of dataInfoPokemon.types">
+        {{ types.type.name}}
+    </p>
+</div>

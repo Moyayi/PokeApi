@@ -1,0 +1,12 @@
+<form>
+    <input type="text" [(ngModel)]="busqueda" name="pokemon" required="">
+    <br><br>
+    <button (click)="buscarPokemon()">Buscar pokemon</button>
+
+</form>
+
+<div *ngIf="pokemonEncontrado ; else ningunResultado">
+    <app-preview-pokemon [dataInfoPokemon]="pokemon"></app-preview-pokemon>
+</div>
+
+<ng-template  #ningunResultado>{{noEncontrado}}</ng-template >

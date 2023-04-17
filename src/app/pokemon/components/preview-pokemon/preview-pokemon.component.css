@@ -1,0 +1,7 @@
+.previewPokemon{
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+}

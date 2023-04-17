@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pokemon-wiki';
+
+  test : string = environment.endPointApi;
 }
